@@ -7,7 +7,7 @@ const Train = {
   },
   getAvailability: async (source, destination) => {
     const res = await pool.query('SELECT * FROM trains WHERE source = $1 AND destination = $2', [source, destination]);
-    return res.rows;
+     return res.rows;
   },
 };
 

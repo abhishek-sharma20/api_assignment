@@ -7,7 +7,7 @@ const Booking = {
   },
   getByUser: async (userId) => {
     const res = await pool.query('SELECT * FROM bookings WHERE user_id = $1', [userId]);
-    return res.rows;
+     return res.rows;
   },
 };
 

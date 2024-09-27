@@ -1,18 +1,46 @@
-# Railway Management System API
 
-## Overview
-This is a Railway Management System API that allows users to check train availability, book seats, and manage user accounts. Admins can manage train data.
+ Overview
+This is allows users to check train availability, book seats, and manage user accounts. Admins can manage train data.
 
-## Technologies Used
+ Technologies Used
 - Node.js
 - Express.js
 - PostgreSQL
 - JWT for authentication
 - dotenv for environment variables
 
-## Setup Instructions
+Procesdure:-
+Extract files
 
-1. Clone the repository
-   ```bash
-   git clone <repository_url>
-   cd railway-management-system
+Install the modules using npm i
+
+To run the project - npm start
+
+If PostgreSQL is installed then do change the password accordingly at /middleware/connection file
+
+Create an endpoint for registering a user.
+
+Provide the ability to the user to log into his account.
+
+An endpoint for the admin to create a new train with a source and destination
+
+Create an endpoint for the users where they can enter the source and destination and fetch all the trains between that route with their availabilities.
+
+Create an endpoint for the users to book a seat on a particular train.
+
+Get Specific Booking Details make readme like this
+
+
+Usage:-
+
+Register a User
+Use the /api/auth/register endpoint to create a user account.
+
+Login and Get JWT Token
+After registration, log in using the /api/auth/login endpoint to receive a JWT token, which will be used for authorized actions.
+
+Admin Actions (Adding a Train)
+Admins can add a new train using the /api/trains endpoint. Include the x-api-key header with the value from the .env file to authenticate as an admin.
+
+Booking a Seat
+Logged-in users can book a seat by making a POST request to /api/bookings with the Authorization header containing the JWT token.

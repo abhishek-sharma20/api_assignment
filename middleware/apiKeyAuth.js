@@ -7,7 +7,7 @@ const apiKeyAuth = (req, res, next) => {
     return next();
   }
   
-  return res.status(403).send('Invalid API Key');
+   return res.status(403).send('Invalid API Key');
 };
 
 module.exports = apiKeyAuth;
