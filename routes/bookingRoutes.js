@@ -1,4 +1,4 @@
-const express = require('express');
+ const express = require('express');
 const { bookSeat, getBookingDetails } = require('../controllers/bookingController');
 const authenticateJWT = require('../middleware/auth');
 const router = express.Router();
