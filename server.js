@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
-const trainRoutes = require('./routes/trainRoutes');
+const trainRoutes = require('./routes/trainRoutes'); 
 const bookingRoutes = require('./routes/bookingRoutes');
 
 const app = express();
