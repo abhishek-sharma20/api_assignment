@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+ const pool = require('../config/db');
 
 const Booking = {
   create: async (userId, trainId) => {
