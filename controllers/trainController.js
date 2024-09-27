@@ -1,4 +1,4 @@
-const Train = require('../models/train');
+ const Train = require('../models/train');
 
 const addTrain = async (req, res) => {
   const { source, destination, seats } = req.body;
