@@ -45,5 +45,4 @@ Admins can add a new train using the /api/trains endpoint. Include the x-api-key
 Booking a Seat
 Logged-in users can book a seat by making a POST request to /api/bookings with the Authorization header containing the JWT token.
 
-![irctc](https://github.com/user-attachments/assets/214783a7-5f6a-49e1-aeca-26745815e9c3)
 
