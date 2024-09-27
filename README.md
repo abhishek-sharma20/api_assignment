@@ -46,3 +46,25 @@ Booking a Seat
 Logged-in users can book a seat by making a POST request to /api/bookings with the Authorization header containing the JWT token.
 
 
+Database table:-
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE trains (
+  id SERIAL PRIMARY KEY,
+  source VARCHAR(255) NOT NULL,
+  destination VARCHAR(255) NOT NULL,
+  seats INT NOT NULL
+);
+
+CREATE TABLE bookings (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES users(id),
+  train_id INT REFERENCES trains(id),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
